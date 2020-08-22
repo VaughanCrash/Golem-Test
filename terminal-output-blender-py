@@ -1,0 +1,139 @@
+(yagna-python-tutorial) ubuntu@ubuntu:~/yapapi/examples/blender$ python3 ./blender.py
+progress= {'allocation': '628ee7a2-2dea-428a-9689-55fd14db39e5', 'spent_amount': Decimal('0'), 'remaining_amount': Decimal('10')}
+('sub', 'created', 'd5e02dea-e9fe-4ba2-ab96-e4645499c058', {})
+('prop', 'recv', '9284e5a5-2aa5-49fc-881d-448291f12e6d', {'_from': '0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b'})
+('prop', 'respond', '9284e5a5-2aa5-49fc-881d-448291f12e6d', {})
+('prop', 'recv', '6b35b382-3c1f-4bce-91b0-c015f27c51d9', {'_from': '0x6394ca3105d9745656f49d7457dfb60349fbeee3'})
+('prop', 'respond', '6b35b382-3c1f-4bce-91b0-c015f27c51d9', {})
+('prop', 'recv', 'c8386d49-5091-4662-bfc2-19bc0dee3348', {'_from': '0x5ddfed430c9a15125dbd23ffa25c34e897e28666'})
+('prop', 'respond', 'c8386d49-5091-4662-bfc2-19bc0dee3348', {})
+('prop', 'recv', 'e1c41912-cc27-41e1-868a-457c54ffbf87', {'_from': '0x82914e8d26322f1977a17c2544c1327c0c3ccb8c'})
+('prop', 'respond', 'e1c41912-cc27-41e1-868a-457c54ffbf87', {})
+('prop', 'recv', '763e5f72-b880-46da-8ceb-72ed71cef824', {'_from': '0x82b5389e3a0b5800918c01ec05afb93451e0d41d'})
+('prop', 'respond', '763e5f72-b880-46da-8ceb-72ed71cef824', {})
+('prop', 'recv', 'fad2c9ca-147e-44c5-85bd-35888d3dcfc6', {'_from': '0x37bc0a5e35863200eecfb55a4134399597017c5b'})
+('prop', 'respond', 'fad2c9ca-147e-44c5-85bd-35888d3dcfc6', {})
+('prop', 'recv', 'e44afd17-7c98-47db-a509-169066d75f46', {'_from': '0x717464072d7926889b86c3777e666ee858eda263'})
+('prop', 'respond', 'e44afd17-7c98-47db-a509-169066d75f46', {})
+('prop', 'recv', 'e3d8a13b-5fb4-4376-96e9-7aa2c7ff8b82', {'_from': '0xf554f79cf0787008e12964519f28c0100343764b'})
+('prop', 'respond', 'e3d8a13b-5fb4-4376-96e9-7aa2c7ff8b82', {})
+('prop', 'recv', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {'_from': '0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b'})
+('prop', 'buffered', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {})
+('prop', 'recv', '69faa479-95bf-4e75-8ba8-0f6bffa6f622', {'_from': '0x6394ca3105d9745656f49d7457dfb60349fbeee3'})
+('prop', 'buffered', '69faa479-95bf-4e75-8ba8-0f6bffa6f622', {})
+('prop', 'recv', '6af835d4-cea8-465a-9d37-0daa4f522252', {'_from': '0x5ddfed430c9a15125dbd23ffa25c34e897e28666'})
+('prop', 'buffered', '6af835d4-cea8-465a-9d37-0daa4f522252', {})
+('prop', 'recv', '2c8d6841-50ef-4a4e-9931-bcde94795e30', {'_from': '0x82914e8d26322f1977a17c2544c1327c0c3ccb8c'})
+('prop', 'buffered', '2c8d6841-50ef-4a4e-9931-bcde94795e30', {})
+('prop', 'recv', 'cdadc43e-846b-4f49-aa3e-20e4096c4dff', {'_from': '0x82b5389e3a0b5800918c01ec05afb93451e0d41d'})
+('prop', 'buffered', 'cdadc43e-846b-4f49-aa3e-20e4096c4dff', {})
+('prop', 'recv', '6a6f26b4-576d-48c8-960b-32181f4c42a6', {'_from': '0x37bc0a5e35863200eecfb55a4134399597017c5b'})
+('prop', 'buffered', '6a6f26b4-576d-48c8-960b-32181f4c42a6', {})
+('prop', 'recv', 'f8c5b712-bc22-4a09-915d-a6ddf86d7482', {'_from': '0x717464072d7926889b86c3777e666ee858eda263'})
+('prop', 'buffered', 'f8c5b712-bc22-4a09-915d-a6ddf86d7482', {})
+('prop', 'recv', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {'_from': '0xf554f79cf0787008e12964519f28c0100343764b'})
+('prop', 'buffered', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {})
+('agr', 'create', '6af835d4-cea8-465a-9d37-0daa4f522252', {'provider_idn': Identification(name='golem-dev@qbam-testnet', subnet_tag='testnet')})
+('agr', 'confirm', '6af835d4-cea8-465a-9d37-0daa4f522252', {})
+('wkr', 'created', 0, {'agreement': '6af835d4-cea8-465a-9d37-0daa4f522252', 'provider_idn': Identification(name='golem-dev@qbam-testnet', subnet_tag='testnet')})
+('act', 'create', 'a7b566a2295243228d905bcbb3340074', {})
+('wkr', 'get-work', 0, {'task': Task(data=0})
+new batch !!! [{'deploy': {}}, {'start': {}}, {'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10', 'to': 'container:/golem/resource/scene.blend'}}, {'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/ac2ec7ef5af78c2faaf27ef593f9cd62666340dccfb5d730b5430f343d524933', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0000.png', 'to': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/gcGJZEiAQA7UGQQWY9KqEGSJJgLQIpQEV6G0UE0MrHvk7OeNlJl9FYwrYWMZNpAf8'}}] <yapapi.rest.activity.Batch object at 0x7fbe55644eb8>
+('agr', 'create', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {'provider_idn': Identification(name='golem-dev@awokado-testnet', subnet_tag='testnet')})
+('wkr', 'step', 0, {'message': 'stdout: {\n  "valid": {\n  ', 'idx': 0})
+('wkr', 'step', 0, {'message': None, 'idx': 1})
+('agr', 'confirm', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {})
+('wkr', 'created', 1, {'agreement': '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', 'provider_idn': Identification(name='golem-dev@awokado-testnet', subnet_tag='testnet')})
+('act', 'create', '8e5bbcb741fa41129a3d48f8cf34623c', {})
+('wkr', 'get-work', 1, {'task': Task(data=10})
+[2020-08-22T05:57:26Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetMetadata' already registered
+[2020-08-22T05:57:26Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetChunk' already registered
+new batch !!! [{'deploy': {}}, {'start': {}}, {'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10', 'to': 'container:/golem/resource/scene.blend'}}, {'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/2986a1204b7e92b7877820b37cf8504bb5de6ea91da3ab48209069b2622dac5b', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0010.png', 'to': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/OKn3K1fJzrnXUdeS8UySeiAQdmXrbzSE4ZDbCraiJOK08oKP9TJKCcJHY2rnYPX9r'}}] <yapapi.rest.activity.Batch object at 0x7fbe555a5860>
+('agr', 'create', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {'provider_idn': Identification(name='tworec@lukaszglen-testnet', subnet_tag='testnet')})
+('agr', 'confirm', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {})
+('wkr', 'created', 2, {'agreement': 'b90312b2-7883-400a-9beb-2a1e1b9803d3', 'provider_idn': Identification(name='tworec@lukaszglen-testnet', subnet_tag='testnet')})
+('act', 'create', '32fd9cee68314ad6a58e5413555abf72', {})
+('wkr', 'get-work', 2, {'task': Task(data=20})
+[2020-08-22T05:57:32Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetMetadata' already registered
+[2020-08-22T05:57:32Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetChunk' already registered
+new batch !!! [{'deploy': {}}, {'start': {}}, {'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10', 'to': 'container:/golem/resource/scene.blend'}}, {'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/30d60d68c6b3ff326d441d664f48d6cbb50febd1890183b17b88b8370d40c754', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0020.png', 'to': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/Rpave5a0OyKhreiFpoHesyeqhHaDkTpgSysbPQUGCuGQGNi36yu9wWl6CKMRQYJL9'}}] <yapapi.rest.activity.Batch object at 0x7fbe55644e48>
+('wkr', 'step', 2, {'message': 'stdout: {\n  "valid": {\n  ', 'idx': 0})
+('wkr', 'step', 2, {'message': None, 'idx': 1})
+('wkr', 'step', 0, {'message': None, 'idx': 2})
+('wkr', 'step', 0, {'message': None, 'idx': 3})
+('wkr', 'step', 0, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 4})
+('wkr', 'step', 1, {'message': 'stdout: {\n  "valid": {\n  ', 'idx': 0})
+('wkr', 'step', 1, {'message': None, 'idx': 1})
+('wkr', 'step', 1, {'message': None, 'idx': 2})
+('wkr', 'step', 1, {'message': None, 'idx': 3})
+('wkr', 'step', 1, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 4})
+('wkr', 'step', 2, {'message': None, 'idx': 2})
+('wkr', 'step', 2, {'message': None, 'idx': 3})
+('wkr', 'step', 2, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 4})
+start
+done
+('wkr', 'step', 0, {'message': None, 'idx': 5})
+('wkr', 'get-results', 0, {})
+('wkr', 'bach-done', 0, {})
+('agr', 'payment_prep', '6af835d4-cea8-465a-9d37-0daa4f522252', {})
+('agr', 'payment_queued', '6af835d4-cea8-465a-9d37-0daa4f522252', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'get-work', 0, {'task': Task(data=30})
+new batch !!! [{'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/5b9e88c14ae3c8262abd1dd073296ece79d4c77ab114d555658e894e67a84839', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0030.png', 'to': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/DN69ctDxj4yYS2CPzt35TfGbZgaFZu68LcNlV4lJxfIo0NkZQ8mRVnNXbdoedK57t'}}] <yapapi.rest.activity.Batch object at 0x7fbe555a5d68>
+start
+done
+('wkr', 'step', 1, {'message': None, 'idx': 5})
+('wkr', 'get-results', 1, {})
+('wkr', 'bach-done', 1, {})
+('agr', 'payment_prep', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {})
+('agr', 'payment_queued', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'get-work', 1, {'task': Task(data=40})
+new batch !!! [{'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/ce0d6e911f6cf144be16d5dc4af7951058cdb3ed4fd73d2aee90a23e87fed4d1', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0040.png', 'to': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/vbgRtjmTy828uDEXsvGZtPg63bcqOr7SZE5LY0TYSWFrOoDe9bhWhLGZvOWpuwnpb'}}] <yapapi.rest.activity.Batch object at 0x7fbe55644eb8>
+start
+done
+('wkr', 'step', 2, {'message': None, 'idx': 5})
+('wkr', 'get-results', 2, {})
+('wkr', 'bach-done', 2, {})
+('agr', 'payment_prep', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {})
+('agr', 'payment_queued', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'get-work', 2, {'task': Task(data=50})
+('wkr', 'step', 0, {'message': None, 'idx': 0})
+('wkr', 'step', 0, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 1})
+new batch !!! [{'transfer': {'from': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/8c72688632e0fc0fd6bf6ec8c53023affee1ccde0bf90240a5ce9307cf09afda', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0050.png', 'to': 'gftp://0x560b672372d3bb162828f7e267018b572994adb5/eXRQovWnsaVTnjcJFk7e8FVwtZzS9ECM2lbYt7qHUGX0uTBTuXs2EGMwT8yng5ePO'}}] <yapapi.rest.activity.Batch object at 0x7fbe555f3940>
+start
+done
+('wkr', 'step', 0, {'message': None, 'idx': 2})
+('wkr', 'get-results', 0, {})
+('wkr', 'bach-done', 0, {})
+('agr', 'payment_prep', '6af835d4-cea8-465a-9d37-0daa4f522252', {})
+('agr', 'payment_queued', '6af835d4-cea8-465a-9d37-0daa4f522252', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'step', 1, {'message': None, 'idx': 0})
+('wkr', 'step', 1, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 1})
+('wkr', 'step', 2, {'message': None, 'idx': 0})
+('wkr', 'step', 2, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 1})
+start
+done
+('wkr', 'step', 2, {'message': None, 'idx': 2})
+('wkr', 'get-results', 2, {})
+('wkr', 'bach-done', 2, {})
+('agr', 'payment_prep', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {})
+('agr', 'payment_queued', 'b90312b2-7883-400a-9beb-2a1e1b9803d3', {})
+('task', 'accept', None, {'result': None})
+start
+done
+('wkr', 'step', 1, {'message': None, 'idx': 2})
+('wkr', 'get-results', 1, {})
+('wkr', 'bach-done', 1, {})
+('agr', 'payment_prep', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {})
+('agr', 'payment_queued', '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', {})
+('task', 'accept', None, {'result': None})
+progress= {'stage': 'all work done'}
+got= {'invoice_id': 'f8344f2f-5be9-4b5e-bee4-229b483cf728', 'issuer_id': '0xf554f79cf0787008e12964519f28c0100343764b', 'recipient_id': '0x560b672372d3bb162828f7e267018b572994adb5', 'payee_addr': '0xf554f79cf0787008e12964519f28c0100343764b', 'payer_addr': '0x560b672372d3bb162828f7e267018b572994adb5', 'last_debit_note_id': None, 'timestamp': datetime.datetime(2020, 8, 22, 5, 58, 17, 825000, tzinfo=tzlocal()), 'agreement_id': '0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c', 'activity_ids': ['8e5bbcb741fa41129a3d48f8cf34623c'], 'amount': '0.1065268826680000', 'payment_due_date': datetime.datetime(2020, 8, 22, 5, 58, 17, 714127, tzinfo=tzlocal()), 'status': 'RECEIVED'}
+progress= {'stage': 'wait for invoices', 'agreements_to_pay': {'6af835d4-cea8-465a-9d37-0daa4f522252', 'b90312b2-7883-400a-9beb-2a1e1b9803d3'}}
+got= {'invoice_id': '8466126b-1263-498b-a7ad-b02c25dd7a58', 'issuer_id': '0x5ddfed430c9a15125dbd23ffa25c34e897e28666', 'recipient_id': '0x560b672372d3bb162828f7e267018b572994adb5', 'payee_addr': '0x5ddfed430c9a15125dbd23ffa25c34e897e28666', 'payer_addr': '0x560b672372d3bb162828f7e267018b572994adb5', 'last_debit_note_id': None, 'timestamp': datetime.datetime(2020, 8, 22, 5, 58, 18, 746000, tzinfo=tzlocal()), 'agreement_id': '6af835d4-cea8-465a-9d37-0daa4f522252', 'activity_ids': ['a7b566a2295243228d905bcbb3340074'], 'amount': '0.1039686541070000', 'payment_due_date': datetime.datetime(2020, 8, 22, 5, 58, 18, 386042, tzinfo=tzlocal()), 'status': 'RECEIVED'}
+got= {'invoice_id': '19b73f15-865d-45fc-9ae6-5d8d44a1251b', 'issuer_id': '0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b', 'recipient_id': '0x560b672372d3bb162828f7e267018b572994adb5', 'payee_addr': '0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b', 'payer_addr': '0x560b672372d3bb162828f7e267018b572994adb5', 'last_debit_note_id': None, 'timestamp': datetime.datetime(2020, 8, 22, 5, 58, 19, 52000, tzinfo=tzlocal()), 'agreement_id': 'b90312b2-7883-400a-9beb-2a1e1b9803d3', 'activity_ids': ['32fd9cee68314ad6a58e5413555abf72'], 'amount': '0.1011049390880000', 'payment_due_date': datetime.datetime(2020, 8, 22, 5, 58, 18, 693300, tzinfo=tzlocal()), 'status': 'RECEIVED'}
+progress= {'done': True}
+
