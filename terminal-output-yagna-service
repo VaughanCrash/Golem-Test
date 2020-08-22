@@ -1,0 +1,227 @@
+ubuntu@ubuntu:~$ yagna service run
+[2020-08-22T05:52:12Z INFO  yagna::data_dir] creating default data dir: "/home/ubuntu/.local/share/yagna"
+[2020-08-22T05:52:12Z INFO  yagna] Using data dir: "/home/ubuntu/.local/share/yagna" 
+
+By running this software you declare that you have read, understood
+and hereby accept the disclaimer and privacy warning found at
+https://handbook.golem.network/see-also/terms
+
+Do you accept the terms and conditions? [yes/no]: yes
+[2020-08-22T05:52:14Z INFO  yagna] Starting yagna service!
+[2020-08-22T05:52:14Z INFO  ya_sb_router] Router listening on: 127.0.0.1:7464
+[2020-08-22T05:52:14Z INFO  ya_persistence::executor] using database at: /home/ubuntu/.local/share/yagna/yagna.db
+[2020-08-22T05:52:14Z INFO  ya_persistence::executor] using database at: /home/ubuntu/.local/share/yagna/market.db
+[2020-08-22T05:52:14Z INFO  ya_persistence::executor] using database at: /home/ubuntu/.local/share/yagna/activity.db
+[2020-08-22T05:52:14Z INFO  ya_persistence::executor] using database at: /home/ubuntu/.local/share/yagna/payment.db
+[2020-08-22T05:52:15Z INFO  ya_persistence::executor] using database at: /home/ubuntu/.local/share/yagna/gnt-driver.db
+[2020-08-22T05:52:15Z INFO  yagna] activating Identity service
+Running migration 20200103135015
+[2020-08-22T05:52:15Z INFO  ya_identity::service::identity] generating new default identity
+[2020-08-22T05:52:15Z INFO  ya_identity::service::identity] using default identity: 0x560b672372d3bb162828f7e267018b572994adb5
+[2020-08-22T05:52:15Z INFO  yagna] Identity service successfully activated
+[2020-08-22T05:52:15Z INFO  yagna] activating Net service
+[2020-08-22T05:52:15Z INFO  ya_service_bus::remote_router] trying to connect to: 127.0.0.1:7464
+[2020-08-22T05:52:15Z INFO  ya_net::service] using default identity as network id: 0x560b672372d3bb162828f7e267018b572994adb5
+[2020-08-22T05:52:15Z INFO  ya_service_bus::connection] started connection to gsb
+[2020-08-22T05:52:15Z INFO  ya_service_bus::connection] started connection to gsb
+[2020-08-22T05:52:15Z INFO  ya_net::service] network service bound at: 3.249.139.167:7464 under: /net/0x560b672372d3bb162828f7e267018b572994adb5
+[2020-08-22T05:52:15Z INFO  yagna] Net service successfully activated
+[2020-08-22T05:52:15Z INFO  yagna] activating Market service
+Running migration 20200203152610
+[2020-08-22T05:52:15Z INFO  yagna] Market service successfully activated
+[2020-08-22T05:52:15Z INFO  yagna] activating Activity service
+Running migration 20200526161800
+[2020-08-22T05:52:15Z INFO  yagna] Activity service successfully activated
+[2020-08-22T05:52:15Z INFO  yagna] activating Payment service
+Running migration 20200123123456
+[2020-08-22T05:52:15Z INFO  yagna] Payment service successfully activated
+[2020-08-22T05:52:15Z INFO  yagna] activating PaymentDriver service
+Running migration 20200224085334
+[2020-08-22T05:52:15Z INFO  ya_payment_driver::gnt] Load active accounts on driver start
+[2020-08-22T05:52:15Z INFO  ya_payment_driver::gnt::sender] Account: "0x560b672372d3bb162828f7e267018b572994adb5" is unlocked
+[2020-08-22T05:52:15Z INFO  yagna] PaymentDriver service successfully activated
+[2020-08-22T05:52:15Z INFO  actix_server::builder] Starting 4 workers
+[2020-08-22T05:52:15Z INFO  actix_server::builder] Starting "actix-web-service-127.0.0.1:7465" service on 127.0.0.1:7465
+[2020-08-22T05:52:55Z INFO  ya_payment_driver::service] init: Init { address: "0x560b672372d3bb162828f7e267018b572994adb5", mode: SEND }
+[2020-08-22T05:53:12Z INFO  ya_payment_driver::gnt] Requesting Gnt from Faucet...
+[2020-08-22T05:53:13Z INFO  ya_payment_driver::gnt] send new tx: ["7eeaf8949644f877745e7976b1ced880c544e84036bb212bb16f227b3c0cebfcd3c039bb4ae909e2df9c4740936da6b3c94c90d3a91c88d518867212effc03b8"]
+[2020-08-22T05:53:46Z INFO  ya_payment_driver::gnt::sender] tx_id="7eeaf8949644f877745e7976b1ced880c544e84036bb212bb16f227b3c0cebfcd3c039bb4ae909e2df9c4740936da6b3c94c90d3a91c88d518867212effc03b8", confirmations=2
+[2020-08-22T05:54:16Z INFO  ya_payment_driver::gnt::sender] tx_id="7eeaf8949644f877745e7976b1ced880c544e84036bb212bb16f227b3c0cebfcd3c039bb4ae909e2df9c4740936da6b3c94c90d3a91c88d518867212effc03b8", confirmations=4
+[2020-08-22T05:54:46Z INFO  ya_payment_driver::gnt::sender] tx_id="7eeaf8949644f877745e7976b1ced880c544e84036bb212bb16f227b3c0cebfcd3c039bb4ae909e2df9c4740936da6b3c94c90d3a91c88d518867212effc03b8", confirmations=6
+[2020-08-22T05:54:46Z INFO  ya_payment_driver::gnt::sender] tx_id=7eeaf8949644f877745e7976b1ced880c544e84036bb212bb16f227b3c0cebfcd3c039bb4ae909e2df9c4740936da6b3c94c90d3a91c88d518867212effc03b8, processed
+[2020-08-22T05:54:51Z INFO  ya_payment::service::local] get status: GetStatus(0x560b672372d3bb162828f7e267018b572994adb5)
+[2020-08-22T05:54:51Z INFO  ya_payment_driver::service] get account balance: GetAccountBalance("560b672372d3bb162828f7e267018b572994adb5")
+[2020-08-22T05:57:05Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "POST /payment-api/v1/requestor/allocations HTTP/1.1" 201 175 "-" "OpenAPI-Generator//python" 0.000555
+[2020-08-22T05:57:05Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/allocations/628ee7a2-2dea-428a-9689-55fd14db39e5 HTTP/1.1" 200 175 "-" "OpenAPI-Generator//python" 0.000246
+[2020-08-22T05:57:07Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 1.111427
+[2020-08-22T05:57:08Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 7246 "-" "OpenAPI-Generator//python" 0.407827
+[2020-08-22T05:57:09Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/9284e5a5-2aa5-49fc-881d-448291f12e6d HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.815466
+[2020-08-22T05:57:09Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/6b35b382-3c1f-4bce-91b0-c015f27c51d9 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.816870
+[2020-08-22T05:57:10Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/c8386d49-5091-4662-bfc2-19bc0dee3348 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.815912
+[2020-08-22T05:57:11Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/e1c41912-cc27-41e1-868a-457c54ffbf87 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.817507
+[2020-08-22T05:57:11Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001702
+[2020-08-22T05:57:12Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/763e5f72-b880-46da-8ceb-72ed71cef824 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.817047
+[2020-08-22T05:57:13Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/fad2c9ca-147e-44c5-85bd-35888d3dcfc6 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.815066
+[2020-08-22T05:57:14Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/e44afd17-7c98-47db-a509-169066d75f46 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.817131
+[2020-08-22T05:57:14Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "POST /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/proposals/e3d8a13b-5fb4-4376-96e9-7aa2c7ff8b82 HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.815176
+[2020-08-22T05:57:15Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 5618 "-" "OpenAPI-Generator//python" 0.409330
+[2020-08-22T05:57:16Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 946 "-" "OpenAPI-Generator//python" 1.324702
+[2020-08-22T05:57:16Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.000550
+[2020-08-22T05:57:17Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 940 "-" "OpenAPI-Generator//python" 0.405969
+[2020-08-22T05:57:17Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 1.041985
+[2020-08-22T05:57:18Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "GET /market-api/v1/agreements/6af835d4-cea8-465a-9d37-0daa4f522252 HTTP/1.1" 200 1595 "-" "OpenAPI-Generator//python" 0.335018
+[2020-08-22T05:57:18Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements/6af835d4-cea8-465a-9d37-0daa4f522252/confirm HTTP/1.1" 200 0 "-" "OpenAPI-Generator//python" 0.367852
+[2020-08-22T05:57:19Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements/6af835d4-cea8-465a-9d37-0daa4f522252/wait?timeout=90 HTTP/1.1" 200 10 "-" "OpenAPI-Generator//python" 1.228095
+[2020-08-22T05:57:20Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "GET /market-api/v1/agreements/6af835d4-cea8-465a-9d37-0daa4f522252 HTTP/1.1" 200 1595 "-" "OpenAPI-Generator//python" 0.407509
+[2020-08-22T05:57:21Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001857
+[2020-08-22T05:57:22Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "POST /activity-api/v1/activity HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 1.838618
+[2020-08-22T05:57:22Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "POST /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 0.393358
+[2020-08-22T05:57:22Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.657799
+[2020-08-22T05:57:22Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "GET /market-api/v1/agreements/0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c HTTP/1.1" 200 1597 "-" "OpenAPI-Generator//python" 0.307659
+[2020-08-22T05:57:23Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/a786c20e5c2e4573a83890e886dc4b69 HTTP/1.1" 200 528 "-" "OpenAPI-Generator//python" 0.611607
+[2020-08-22T05:57:23Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements/0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c/confirm HTTP/1.1" 200 0 "-" "OpenAPI-Generator//python" 0.307175
+[2020-08-22T05:57:23Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/a786c20e5c2e4573a83890e886dc4b69 HTTP/1.1" 200 528 "-" "OpenAPI-Generator//python" 0.611502
+[2020-08-22T05:57:24Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements/0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c/wait?timeout=90 HTTP/1.1" 200 10 "-" "OpenAPI-Generator//python" 1.669519
+[2020-08-22T05:57:25Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "GET /market-api/v1/agreements/0b6e8bf3-c5b7-4145-9c9f-ace71c797c8c HTTP/1.1" 200 1597 "-" "OpenAPI-Generator//python" 0.328079
+[2020-08-22T05:57:26Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "POST /activity-api/v1/activity HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 1.468431
+[2020-08-22T05:57:26Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001699
+[2020-08-22T05:57:26Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "POST /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 0.354571
+[2020-08-22T05:57:27Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 10.311022
+[2020-08-22T05:57:27Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements HTTP/1.1" 201 38 "-" "OpenAPI-Generator//python" 0.822030
+[2020-08-22T05:57:27Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/9ba32097bb8645ad886ea4a41410d311 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 0.653599
+[2020-08-22T05:57:27Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "GET /market-api/v1/agreements/b90312b2-7883-400a-9beb-2a1e1b9803d3 HTTP/1.1" 200 1597 "-" "OpenAPI-Generator//python" 0.408771
+[2020-08-22T05:57:28Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements/b90312b2-7883-400a-9beb-2a1e1b9803d3/confirm HTTP/1.1" 200 0 "-" "OpenAPI-Generator//python" 0.306850
+[2020-08-22T05:57:28Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "POST /market-api/v1/agreements/b90312b2-7883-400a-9beb-2a1e1b9803d3/wait?timeout=90 HTTP/1.1" 200 10 "-" "OpenAPI-Generator//python" 0.405234
+[2020-08-22T05:57:29Z INFO  actix_web::middleware::logger] 127.0.0.1:46996 "GET /market-api/v1/agreements/b90312b2-7883-400a-9beb-2a1e1b9803d3 HTTP/1.1" 200 1597 "-" "OpenAPI-Generator//python" 0.879231
+[2020-08-22T05:57:31Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001834
+[2020-08-22T05:57:32Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "POST /activity-api/v1/activity HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 2.594708
+[2020-08-22T05:57:32Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "POST /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 0.655671
+[2020-08-22T05:57:33Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/89e3d991c15d4943991d13bde988df9e HTTP/1.1" 200 528 "-" "OpenAPI-Generator//python" 1.023186
+[2020-08-22T05:57:35Z INFO  actix_web::middleware::logger] 127.0.0.1:47002 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/89e3d991c15d4943991d13bde988df9e HTTP/1.1" 200 528 "-" "OpenAPI-Generator//python" 1.233022
+[2020-08-22T05:57:35Z INFO  actix_web::middleware::logger] 127.0.0.1:47008 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/a786c20e5c2e4573a83890e886dc4b69 HTTP/1.1" 200 313577 "-" "OpenAPI-Generator//python" 1.477069
+[2020-08-22T05:57:35Z INFO  actix_web::middleware::logger] 127.0.0.1:47008 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/a786c20e5c2e4573a83890e886dc4b69 HTTP/1.1" 200 313577 "-" "OpenAPI-Generator//python" 0.625803
+[2020-08-22T05:57:36Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.000855
+[2020-08-22T05:57:38Z INFO  actix_web::middleware::logger] 127.0.0.1:47008 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/9ba32097bb8645ad886ea4a41410d311 HTTP/1.1" 200 315144 "-" "OpenAPI-Generator//python" 0.803411
+[2020-08-22T05:57:38Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 10.387264
+[2020-08-22T05:57:39Z INFO  actix_web::middleware::logger] 127.0.0.1:47008 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/9ba32097bb8645ad886ea4a41410d311 HTTP/1.1" 200 315144 "-" "OpenAPI-Generator//python" 0.790206
+[2020-08-22T05:57:41Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.002247
+[2020-08-22T05:57:45Z INFO  actix_web::middleware::logger] 127.0.0.1:47010 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/89e3d991c15d4943991d13bde988df9e HTTP/1.1" 200 315446 "-" "OpenAPI-Generator//python" 0.829582
+[2020-08-22T05:57:46Z INFO  actix_web::middleware::logger] 127.0.0.1:47012 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/a786c20e5c2e4573a83890e886dc4b69 HTTP/1.1" 200 313626 "-" "OpenAPI-Generator//python" 0.643799
+[2020-08-22T05:57:46Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001554
+[2020-08-22T05:57:46Z INFO  actix_web::middleware::logger] 127.0.0.1:47010 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/89e3d991c15d4943991d13bde988df9e HTTP/1.1" 200 315446 "-" "OpenAPI-Generator//python" 0.866178
+[2020-08-22T05:57:47Z INFO  actix_web::middleware::logger] 127.0.0.1:47012 "POST /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 0.734090
+[2020-08-22T05:57:48Z INFO  actix_web::middleware::logger] 127.0.0.1:47012 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/d426dad971a6495ca823f801374570eb HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 1.021970
+[2020-08-22T05:57:50Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 10.358679
+[2020-08-22T05:57:50Z INFO  actix_web::middleware::logger] 127.0.0.1:47012 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/9ba32097bb8645ad886ea4a41410d311 HTTP/1.1" 200 315193 "-" "OpenAPI-Generator//python" 0.892348
+[2020-08-22T05:57:50Z INFO  actix_web::middleware::logger] 127.0.0.1:47012 "POST /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 0.334043
+[2020-08-22T05:57:51Z INFO  actix_web::middleware::logger] 127.0.0.1:47012 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/dc39398afc8e4807a3d98bc7405e9291 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 0.600404
+[2020-08-22T05:57:51Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.002207
+[2020-08-22T05:57:56Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001022
+[2020-08-22T05:57:58Z INFO  actix_web::middleware::logger] 127.0.0.1:47014 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/89e3d991c15d4943991d13bde988df9e HTTP/1.1" 200 315495 "-" "OpenAPI-Generator//python" 1.438021
+[2020-08-22T05:57:58Z INFO  actix_web::middleware::logger] 127.0.0.1:47016 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/d426dad971a6495ca823f801374570eb HTTP/1.1" 200 314778 "-" "OpenAPI-Generator//python" 0.569198
+[2020-08-22T05:57:58Z INFO  actix_web::middleware::logger] 127.0.0.1:47014 "POST /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec HTTP/1.1" 200 34 "-" "OpenAPI-Generator//python" 0.603867
+[2020-08-22T05:57:59Z INFO  actix_web::middleware::logger] 127.0.0.1:47016 "GET /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074/exec/d426dad971a6495ca823f801374570eb HTTP/1.1" 200 314827 "-" "OpenAPI-Generator//python" 0.692529
+[2020-08-22T05:57:59Z INFO  actix_web::middleware::logger] 127.0.0.1:47014 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/d19c2f0bc96a47b881ac9f15ac9d5624 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 0.857038
+[2020-08-22T05:58:01Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 10.308321
+[2020-08-22T05:58:01Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001042
+[2020-08-22T05:58:01Z INFO  actix_web::middleware::logger] 127.0.0.1:47014 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/dc39398afc8e4807a3d98bc7405e9291 HTTP/1.1" 200 314570 "-" "OpenAPI-Generator//python" 0.884795
+[2020-08-22T05:58:03Z INFO  actix_web::middleware::logger] 127.0.0.1:47014 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/dc39398afc8e4807a3d98bc7405e9291 HTTP/1.1" 200 314570 "-" "OpenAPI-Generator//python" 1.020585
+[2020-08-22T05:58:06Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001310
+[2020-08-22T05:58:11Z INFO  actix_web::middleware::logger] 127.0.0.1:47018 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/d19c2f0bc96a47b881ac9f15ac9d5624 HTTP/1.1" 200 314869 "-" "OpenAPI-Generator//python" 1.469058
+[2020-08-22T05:58:11Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001241
+[2020-08-22T05:58:12Z INFO  actix_web::middleware::logger] 127.0.0.1:47018 "GET /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72/exec/d19c2f0bc96a47b881ac9f15ac9d5624 HTTP/1.1" 200 314918 "-" "OpenAPI-Generator//python" 0.822159
+[2020-08-22T05:58:12Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 10.412949
+[2020-08-22T05:58:14Z INFO  actix_web::middleware::logger] 127.0.0.1:47018 "GET /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c/exec/dc39398afc8e4807a3d98bc7405e9291 HTTP/1.1" 200 314619 "-" "OpenAPI-Generator//python" 1.137898
+[2020-08-22T05:58:16Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 5.001104
+[2020-08-22T05:58:17Z INFO  actix_web::middleware::logger] 127.0.0.1:47024 "DELETE /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058 HTTP/1.1" 204 0 "-" "OpenAPI-Generator//python" 0.613134
+[2020-08-22T05:58:17Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:57:06.785916%2B00:00 HTTP/1.1" 200 116 "-" "OpenAPI-Generator//python" 1.002352
+[2020-08-22T05:58:17Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoices/f8344f2f-5be9-4b5e-bee4-229b483cf728 HTTP/1.1" 200 524 "-" "OpenAPI-Generator//python" 0.000837
+[2020-08-22T05:58:17Z INFO  actix_web::middleware::logger] 127.0.0.1:47018 "DELETE /activity-api/v1/activity/8e5bbcb741fa41129a3d48f8cf34623c HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 1.122825
+[2020-08-22T05:58:18Z INFO  actix_web::middleware::logger] 127.0.0.1:47022 "DELETE /activity-api/v1/activity/a7b566a2295243228d905bcbb3340074 HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 1.637858
+[2020-08-22T05:58:18Z INFO  actix_web::middleware::logger] 127.0.0.1:47020 "DELETE /activity-api/v1/activity/32fd9cee68314ad6a58e5413555abf72 HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 1.639516
+[2020-08-22T05:58:18Z INFO  ya_payment_driver::service] schedule payment: SchedulePayment { invoice_id: "f8344f2f-5be9-4b5e-bee4-229b483cf728", amount: PaymentAmount { base_currency_amount: BigDecimal("0.1065268826680000"), gas_amount: None }, sender: "0x560b672372d3bb162828f7e267018b572994adb5", recipient: "0xf554f79cf0787008e12964519f28c0100343764b", due_date: 2020-08-22T05:58:17.714127918Z }
+[2020-08-22T05:58:18Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:18Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "POST /payment-api/v1/requestor/invoices/f8344f2f-5be9-4b5e-bee4-229b483cf728/accept HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 0.896044
+[2020-08-22T05:58:18Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:58:17.825000%2B00:00 HTTP/1.1" 200 116 "-" "OpenAPI-Generator//python" 0.000339
+[2020-08-22T05:58:18Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoices/8466126b-1263-498b-a7ad-b02c25dd7a58 HTTP/1.1" 200 524 "-" "OpenAPI-Generator//python" 0.000350
+[2020-08-22T05:58:19Z INFO  ya_payment_driver::service] schedule payment: SchedulePayment { invoice_id: "8466126b-1263-498b-a7ad-b02c25dd7a58", amount: PaymentAmount { base_currency_amount: BigDecimal("0.1039686541070000"), gas_amount: None }, sender: "0x560b672372d3bb162828f7e267018b572994adb5", recipient: "0x5ddfed430c9a15125dbd23ffa25c34e897e28666", due_date: 2020-08-22T05:58:18.386042163Z }
+[2020-08-22T05:58:19Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:19Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "POST /payment-api/v1/requestor/invoices/8466126b-1263-498b-a7ad-b02c25dd7a58/accept HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 0.709879
+[2020-08-22T05:58:19Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoiceEvents?timeout=5&laterThan=2020-08-22T05:58:18.746000%2B00:00 HTTP/1.1" 200 116 "-" "OpenAPI-Generator//python" 0.000502
+[2020-08-22T05:58:19Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "GET /payment-api/v1/requestor/invoices/19b73f15-865d-45fc-9ae6-5d8d44a1251b HTTP/1.1" 200 524 "-" "OpenAPI-Generator//python" 0.000486
+[2020-08-22T05:58:19Z INFO  ya_payment_driver::service] schedule payment: SchedulePayment { invoice_id: "19b73f15-865d-45fc-9ae6-5d8d44a1251b", amount: PaymentAmount { base_currency_amount: BigDecimal("0.1011049390880000"), gas_amount: None }, sender: "0x560b672372d3bb162828f7e267018b572994adb5", recipient: "0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b", due_date: 2020-08-22T05:58:18.693300216Z }
+[2020-08-22T05:58:19Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:19Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "POST /payment-api/v1/requestor/invoices/19b73f15-865d-45fc-9ae6-5d8d44a1251b/accept HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 0.397027
+[2020-08-22T05:58:19Z INFO  actix_web::middleware::logger] 127.0.0.1:46988 "DELETE /payment-api/v1/requestor/allocations/628ee7a2-2dea-428a-9689-55fd14db39e5 HTTP/1.1" 200 4 "-" "OpenAPI-Generator//python" 0.000635
+[2020-08-22T05:58:23Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:24Z INFO  actix_web::middleware::logger] 127.0.0.1:46992 "GET /market-api/v1/demands/d5e02dea-e9fe-4ba2-ab96-e4645499c058/events?timeout=10&maxEvents=10 HTTP/1.1" 200 2 "-" "OpenAPI-Generator//python" 10.361642
+[2020-08-22T05:58:24Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:24Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:28Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:29Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:29Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:33Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:34Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:34Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:38Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:39Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:39Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:43Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:44Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:44Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:45Z INFO  ya_payment_driver::gnt::sender] Processing payment: PaymentEntity { invoice_id: "f8344f2f-5be9-4b5e-bee4-229b483cf728", amount: "000000000000000000000000000000000000000000000000017a75a2a874b300", gas: "0000000000000000000000000000000000000000000000000000000000000000", sender: "0x560b672372d3bb162828f7e267018b572994adb5", recipient: "0xf554f79cf0787008e12964519f28c0100343764b", payment_due_date: 2020-08-22T05:58:17.714127918, status: 1, tx_id: None }
+[2020-08-22T05:58:47Z INFO  ya_payment_driver::gnt::sender] Processing payment: PaymentEntity { invoice_id: "8466126b-1263-498b-a7ad-b02c25dd7a58", amount: "00000000000000000000000000000000000000000000000001715ef0a7d2bcc0", gas: "0000000000000000000000000000000000000000000000000000000000000000", sender: "0x560b672372d3bb162828f7e267018b572994adb5", recipient: "0x5ddfed430c9a15125dbd23ffa25c34e897e28666", payment_due_date: 2020-08-22T05:58:18.386042163, status: 1, tx_id: None }
+[2020-08-22T05:58:48Z INFO  ya_payment_driver::gnt::sender] Processing payment: PaymentEntity { invoice_id: "19b73f15-865d-45fc-9ae6-5d8d44a1251b", amount: "000000000000000000000000000000000000000000000000016732680b60b400", gas: "0000000000000000000000000000000000000000000000000000000000000000", sender: "0x560b672372d3bb162828f7e267018b572994adb5", recipient: "0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b", payment_due_date: 2020-08-22T05:58:18.693300216, status: 1, tx_id: None }
+[2020-08-22T05:58:48Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:49Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:49Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:53Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:54Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:54Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:58:58Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:58:59Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:58:59Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:03Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:04Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:04Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:08Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:09Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:09Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:13Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:14Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:14Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:16Z INFO  ya_payment_driver::gnt::sender] tx_id="d71d57f2e6980eb78e6ec88b76b2c6dcdc4e366c4083aa88316f6989d5734f318c081fba4651bc91f50f9feefa15f160980a2250e024781e14b13a6e55c10200", confirmations=2
+[2020-08-22T05:59:16Z INFO  ya_payment_driver::gnt::sender] tx_id="2957e18c822baf921d2c015ea0377017992c2f24f9f92c472046f9c8677c078201de4aa0c45e7620a15295e5bcdc9424d1546f49be15529f5227e01a2daecdc6", confirmations=2
+[2020-08-22T05:59:17Z INFO  ya_payment_driver::gnt::sender] tx_id="4ad098a19ce9327ec19ffd32795a90e387d6e96d17d2ea7318c64de105bd8ef01d77ad3add88725c2d1a6ac3b32614f0030a586c56876412ab24729d1cf6e0b5", confirmations=2
+[2020-08-22T05:59:18Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:19Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:19Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:23Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:24Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:24Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:28Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:29Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:29Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:33Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:34Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:34Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:38Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:39Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:39Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:43Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:44Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:44Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+[2020-08-22T05:59:46Z INFO  ya_payment_driver::gnt::sender] tx_id="d71d57f2e6980eb78e6ec88b76b2c6dcdc4e366c4083aa88316f6989d5734f318c081fba4651bc91f50f9feefa15f160980a2250e024781e14b13a6e55c10200", confirmations=4
+[2020-08-22T05:59:46Z INFO  ya_payment_driver::gnt::sender] tx_id="2957e18c822baf921d2c015ea0377017992c2f24f9f92c472046f9c8677c078201de4aa0c45e7620a15295e5bcdc9424d1546f49be15529f5227e01a2daecdc6", confirmations=4
+[2020-08-22T05:59:47Z INFO  ya_payment_driver::gnt::sender] tx_id="4ad098a19ce9327ec19ffd32795a90e387d6e96d17d2ea7318c64de105bd8ef01d77ad3add88725c2d1a6ac3b32614f0030a586c56876412ab24729d1cf6e0b5", confirmations=4
+[2020-08-22T05:59:48Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("f8344f2f-5be9-4b5e-bee4-229b483cf728")
+[2020-08-22T05:59:49Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("8466126b-1263-498b-a7ad-b02c25dd7a58")
+[2020-08-22T05:59:49Z INFO  ya_payment_driver::service] get payment status: GetPaymentStatus("19b73f15-865d-45fc-9ae6-5d8d44a1251b")
+^C[2020-08-22T05:59:52Z INFO  actix_server::builder] SIGINT received, exiting
+[2020-08-22T05:59:52Z INFO  yagna] yagna service finished!
+
+yagna daemon successfully finished.
+[2020-08-22T05:59:52Z INFO  ya_service_bus::connection] stopped connection to gsb
+[2020-08-22T05:59:52Z INFO  ya_service_bus::connection] stopped connection to gsb
+ubuntu@ubuntu:~$ 
+
