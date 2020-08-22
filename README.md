@@ -15,6 +15,5 @@ sudo apt install python3.6-venv
 
 after then everything went peachy.
 
-[See here for screencast](https://drive.google.com/file/d/1BTLa04instVchr0ce1H6G30eJhzM7u2k/view?usp=sharing)
+[Click here to view the screencast in google drive](https://drive.google.com/file/d/1BTLa04instVchr0ce1H6G30eJhzM7u2k/view?usp=sharing)
 
-[![IMAGE ALT TEXT HERE]()](https://drive.google.com/file/d/1BTLa04instVchr0ce1H6G30eJhzM7u2k/view?usp=sharing)
